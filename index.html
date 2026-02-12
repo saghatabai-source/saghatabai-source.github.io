@@ -6,53 +6,113 @@
 <title>Sali Labs</title>
 
 <style>
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background: radial-gradient(circle at 20% 20%, #1e293b, #0f172a 60%);
   color: white;
   text-align: center;
+  overflow-x: hidden;
+}
+
+/* Glow background animation */
+body::before {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59,130,246,0.4), transparent 70%);
+  top: -200px;
+  left: -200px;
+  animation: moveGlow 8s infinite alternate ease-in-out;
+  z-index: -1;
+}
+
+@keyframes moveGlow {
+  from { transform: translate(0,0); }
+  to { transform: translate(200px,200px); }
 }
 
 .container {
-  padding: 100px 20px;
+  padding: 120px 20px;
 }
 
 h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
+  font-size: 60px;
+  letter-spacing: 3px;
+  animation: fadeIn 1.5s ease forwards;
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 22px;
   color: #94a3b8;
-  margin-bottom: 40px;
+  margin: 20px 0 50px 0;
+  animation: fadeIn 2s ease forwards;
 }
 
 .button {
-  background: #3b82f6;
-  padding: 15px 35px;
-  border-radius: 8px;
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
   text-decoration: none;
   color: white;
   font-weight: bold;
   transition: 0.3s;
+  box-shadow: 0 0 20px rgba(59,130,246,0.5);
 }
 
 .button:hover {
-  background: #2563eb;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(59,130,246,0.8);
 }
 
 .section {
-  margin-top: 120px;
+  margin-top: 150px;
+}
+
+.section h2 {
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  width: 260px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.1);
 }
 
 footer {
-  margin-top: 150px;
+  margin-top: 200px;
   padding: 20px;
   color: #64748b;
   font-size: 14px;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
@@ -67,9 +127,13 @@ footer {
 
   <div class="section">
     <h2>Our Focus</h2>
-    <p>AI-driven structural tools</p>
-    <p>Smart engineering software</p>
-    <p>Advanced monitoring systems</p>
+
+    <div class="cards">
+      <div class="card">AI-Driven Structural Tools</div>
+      <div class="card">Smart Engineering Software</div>
+      <div class="card">Advanced Monitoring Systems</div>
+    </div>
+
   </div>
 
   <footer>
