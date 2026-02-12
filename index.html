@@ -6,140 +6,43 @@
 <title>Sali Labs</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at 20% 20%, #1e293b, #0f172a 60%);
-  color: white;
-  text-align: center;
-  overflow-x: hidden;
-}
-
-/* Glow background animation */
-body::before {
-  content: "";
-  position: fixed;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(59,130,246,0.4), transparent 70%);
-  top: -200px;
-  left: -200px;
-  animation: moveGlow 8s infinite alternate ease-in-out;
-  z-index: -1;
-}
-
-@keyframes moveGlow {
-  from { transform: translate(0,0); }
-  to { transform: translate(200px,200px); }
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
 }
 
 .container {
-  padding: 120px 20px;
+    padding: 120px 20px;
+}
+
+.logo {
+    width: 160px;
+    margin-bottom: 40px;
 }
 
 h1 {
-  font-size: 60px;
-  letter-spacing: 3px;
-  animation: fadeIn 1.5s ease forwards;
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
-.subtitle {
-  font-size: 22px;
-  color: #94a3b8;
-  margin: 20px 0 50px 0;
-  animation: fadeIn 2s ease forwards;
-}
-
-.button {
-  display: inline-block;
-  padding: 15px 40px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: 0.3s;
-  box-shadow: 0 0 20px rgba(59,130,246,0.5);
-}
-
-.button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(59,130,246,0.8);
-}
-
-.section {
-  margin-top: 150px;
-}
-
-.section h2 {
-  margin-bottom: 40px;
-  font-size: 32px;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-}
-
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 30px;
-  width: 260px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  background: rgba(255,255,255,0.1);
-}
-
-footer {
-  margin-top: 200px;
-  padding: 20px;
-  color: #64748b;
-  font-size: 14px;
-}
-
-/* Fade animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+p {
+    font-size: 18px;
+    opacity: 0.8;
 }
 </style>
 </head>
 
 <body>
-
 <div class="container">
-  <h1>SALI LABS</h1>
-  <div class="subtitle">Engineering • AI • Structural Innovation</div>
 
-  <a href="mailto:s.aghatabai@gmail.com" class="button">Contact</a>
+<img src="SaliLabs_Logo_Master_FLAT-1.svg" class="logo">
 
-  <div class="section">
-    <h2>Our Focus</h2>
+<h1>Sali Labs</h1>
+<p>Engineering the Future with Intelligence</p>
 
-    <div class="cards">
-      <div class="card">AI-Driven Structural Tools</div>
-      <div class="card">Smart Engineering Software</div>
-      <div class="card">Advanced Monitoring Systems</div>
-    </div>
-
-  </div>
-
-  <footer>
-    © 2026 Sali Labs — All rights reserved.
-  </footer>
 </div>
-
 </body>
 </html>
