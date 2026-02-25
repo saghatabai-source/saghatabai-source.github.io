@@ -1,37 +1,253 @@
-<!-- SCALABILITY SECTION -->
-<section class="section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sali Labs | Engineering Intelligence</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 50% 20%, #111827 0%, #050507 60%);
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(10,10,12,0.6);
+  backdrop-filter: blur(12px);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  z-index: 1000;
+}
+
+nav h3 {
+  font-weight: 600;
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  font-weight: 800;
+}
+
+.hero p {
+  margin-top: 25px;
+  font-size: 22px;
+  color: #9ca3af;
+  max-width: 750px;
+}
+
+.signature {
+  margin-top: 30px;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #3b82f6;
+  text-transform: uppercase;
+}
+
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 140px 20px;
+}
+
+.section h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.section p {
+  font-size: 18px;
+  color: #cbd5e1;
+  max-width: 800px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 40px;
+  border-radius: 16px;
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(59,130,246,0.5);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.card p {
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+.founder-container {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.founder-image img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.founder-content h3 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.founder-content .title {
+  color: #3b82f6;
+  margin-bottom: 25px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer {
+  text-align: center;
+  padding: 80px 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: #777;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h3>Sali Labs</h3>
+  <div>
+    <a href="#vision">Vision</a>
+    <a href="#scalability">Scalability</a>
+    <a href="#founder">Founder</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Sali Labs</h1>
+  <p>
+    Advanced Engineering & Artificial Intelligence Research Institute
+    Designing Intelligent Infrastructure Systems for a Global Future.
+  </p>
+  <div class="signature">
+    Engineering Intelligence for the Next Civilization
+  </div>
+</section>
+
+<section id="vision" class="section">
+  <h2>Vision</h2>
+  <p>
+    Sali Labs operates at the intersection of structural engineering,
+    computational modeling, and artificial intelligence to develop
+    scalable intelligent infrastructure systems for long-term global deployment.
+  </p>
+</section>
+
+<section id="scalability" class="section">
   <h2>Scalable Engineering Intelligence Platform</h2>
 
   <p>
-    Sali Labs is structured as a modular engineering intelligence platform 
-    designed for scalable deployment across infrastructure domains. Rather 
-    than operating as a project-based entity, the laboratory develops system-level 
-    architectures capable of regional and global expansion.
+    Sali Labs is structured as a modular engineering intelligence platform
+    designed for scalable deployment across infrastructure domains.
   </p>
 
   <div class="grid">
     <div class="card">
       <h3>Modular AI Infrastructure</h3>
-      <p>
-        Core computational models are designed as expandable modules,
-        allowing adaptation across structural, seismic, and urban-scale systems.
-      </p>
+      <p>Expandable computational models adaptable across structural and seismic systems.</p>
     </div>
 
     <div class="card">
       <h3>Platform-Oriented Architecture</h3>
-      <p>
-        Engineering intelligence frameworks are built to evolve into
-        scalable digital platforms supporting multi-region deployment.
-      </p>
+      <p>Engineering intelligence frameworks built for multi-region scalability.</p>
     </div>
 
     <div class="card">
       <h3>Long-Term Global Deployment</h3>
+      <p>Phased expansion of AI-powered infrastructure systems worldwide.</p>
+    </div>
+  </div>
+</section>
+
+<section id="founder" class="section">
+  <div class="founder-container">
+    <div class="founder-image">
+      <img src="founder.jpg" alt="Saleh Aghatabai">
+    </div>
+
+    <div class="founder-content">
+      <h2>Founder</h2>
+      <h3>Saleh Aghatabai</h3>
+      <p class="title">Structural Engineer & AI Systems Architect</p>
+
       <p>
-        The strategic objective is the phased expansion of AI-powered
-        infrastructure systems into emerging and advanced economies.
+        Structural engineer focused on integrating artificial intelligence
+        into scalable engineering systems and intelligent infrastructure platforms.
+      </p>
+
+      <p>
+        Building long-term engineering intelligence architectures designed
+        for resilient, adaptive global deployment.
       </p>
     </div>
   </div>
 </section>
+
+<div class="footer">
+  © 2026 Sali Labs — Engineering the Future with Intelligence
+</div>
+
+</body>
+</html>
