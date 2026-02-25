@@ -9,7 +9,7 @@
 
 <style>
 
-/* ===== GLOBAL RESET ===== */
+/* ===== RESET ===== */
 
 * {
   margin: 0;
@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== DYNAMIC BACKGROUND DEPTH ===== */
+/* ===== BACKGROUND DEPTH ===== */
 
 body::before {
   content: "";
@@ -54,7 +54,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(2,6,17,0.85);
+  background: rgba(2,6,17,0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.05);
   z-index: 1000;
@@ -63,6 +63,10 @@ nav {
 nav h3 {
   font-weight: 600;
   font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
 }
 
 nav a {
@@ -74,7 +78,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 /* ===== HERO ===== */
@@ -88,7 +92,6 @@ nav a:hover {
   max-width: 1200px;
   margin: auto;
   padding-top: 80px;
-  animation: fadeInHero 1.4s ease-out;
 }
 
 .hero h1 {
@@ -116,13 +119,8 @@ section {
   padding: 140px 10%;
 }
 
-.positioning {
-  background: #030a1d;
-}
-
-.architect {
-  background: #01040c;
-}
+.positioning { background: #030a1d; }
+.architect { background: #01040c; }
 
 h2 {
   font-size: 42px;
@@ -137,7 +135,7 @@ section p {
   margin-bottom: 25px;
 }
 
-/* ===== SCROLL REVEAL ===== */
+/* ===== REVEAL ===== */
 
 .reveal {
   opacity: 0;
@@ -159,23 +157,28 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* ===== HERO ANIMATION ===== */
-
-@keyframes fadeInHero {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== RESPONSIVE ===== */
+/* ===== MOBILE FIX ===== */
 
 @media(max-width:768px){
 
-.hero h1 { font-size: 52px; }
+nav {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px 8%;
+}
 
+.nav-links {
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 6px 0 0 0;
+}
+
+.hero h1 { font-size: 48px; }
 .hero p { font-size: 20px; }
-
-h2 { font-size: 32px; }
-
+h2 { font-size: 30px; }
 section p { font-size: 18px; }
 
 }
@@ -187,7 +190,7 @@ section p { font-size: 18px; }
 
 <nav>
   <h3>Sali Labs</h3>
-  <div>
+  <div class="nav-links">
     <a href="#positioning">Platform</a>
     <a href="#vision">Vision</a>
     <a href="#architect">Direction</a>
@@ -247,7 +250,6 @@ function revealOnScroll() {
     const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
     const revealPoint = 120;
-
     if (elementTop < windowHeight - revealPoint) {
       el.classList.add('active');
     }
