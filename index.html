@@ -3,190 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sali Labs | Strategic Global Infrastructure Lab</title>
+<title>Sali Labs | Strategic Global Infrastructure Intelligence Institution</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #020611;
+  background: radial-gradient(circle at 30% 20%, #0b1c3a 0%, #020611 60%);
   color: #ffffff;
   line-height: 1.7;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* Background Depth */
-body::before {
-  content: "";
-  position: fixed;
-  width: 900px;
-  height: 900px;
-  top: -200px;
-  left: -200px;
-  background: radial-gradient(circle, rgba(40,90,255,0.15) 0%, transparent 70%);
-  animation: moveLight 18s infinite alternate ease-in-out;
-  z-index: -1;
-}
-
-@keyframes moveLight {
-  from { transform: translate(0,0); }
-  to { transform: translate(200px,150px); }
-}
-
-/* NAV */
+/* ===== NAVIGATION ===== */
 nav {
   position: fixed;
   width: 100%;
-  padding: 22px 10%;
+  padding: 22px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: rgba(2,6,17,0.9);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
   z-index: 1000;
 }
 
-nav h3 {
+.logo {
   font-weight: 600;
   font-size: 20px;
 }
 
 .nav-links {
   display: flex;
+  gap: 35px;
 }
 
-nav a {
-  color: #aaa;
+.nav-links a {
   text-decoration: none;
-  margin-left: 30px;
-  font-size: 14px;
-  transition: 0.3s;
+  color: rgba(255,255,255,0.7);
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 
-nav a:hover {
-  color: #fff;
+.nav-links a:hover {
+  color: #ffffff;
 }
 
-/* Mobile Toggle */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* HERO */
+/* ===== HERO ===== */
 .hero {
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 10%;
-  max-width: 1200px;
-  margin: auto;
-  padding-top: 80px;
+  align-items: center;
+  padding: 0 8%;
+  animation: fadeIn 1.4s ease-out;
+}
+
+.hero-content {
+  max-width: 800px;
 }
 
 .hero h1 {
-  font-size: 80px;
+  font-size: 82px;
   font-weight: 700;
   margin-bottom: 30px;
 }
 
-.hero p {
+.hero-subtitle {
   font-size: 26px;
-  max-width: 650px;
-  margin-bottom: 30px;
-  color: #d6d6d6;
+  font-weight: 300;
+  margin-bottom: 35px;
+  opacity: 0.9;
 }
 
 .signature {
-  font-size: 13px;
-  letter-spacing: 4px;
-  color: #4d8cff;
-}
-
-/* Sections */
-section {
-  padding: 140px 10%;
-}
-
-.positioning { background: #030a1d; }
-.architect { background: #01040c; }
-
-h2 {
-  font-size: 42px;
-  margin-bottom: 35px;
-}
-
-section p {
-  font-size: 21px;
-  max-width: 900px;
-  color: #cfcfcf;
-  line-height: 1.9;
-  margin-bottom: 25px;
-}
-
-/* Reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Footer */
-footer {
-  padding: 60px 10%;
   font-size: 14px;
-  color: #777;
+  letter-spacing: 3px;
+  color: #5b8dff;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 150px 8%;
+}
+
+.section h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.section-intro {
+  max-width: 800px;
+  opacity: 0.8;
+  margin-bottom: 70px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px;
+}
+
+.grid h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.grid p {
+  opacity: 0.75;
+}
+
+/* ===== WHITEPAPER NOTE ===== */
+.note {
+  margin-top: 60px;
+  border-left: 3px solid rgba(90,140,255,0.6);
+  padding-left: 20px;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* ===== CONTACT ===== */
+.contact-block {
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 50px;
+  max-width: 750px;
+  background: rgba(255,255,255,0.02);
+}
+
+.contact-email {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 25px 0;
+  letter-spacing: 1px;
+  color: #5b8dff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 60px 8%;
+  font-size: 13px;
+  opacity: 0.6;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* MOBILE */
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== MOBILE ===== */
 @media(max-width:768px){
-
-.nav-links {
-  position: absolute;
-  top: 70px;
-  right: 0;
-  background: #020611;
-  width: 100%;
-  flex-direction: column;
-  display: none;
-  padding: 20px 8%;
-}
-
-.nav-links.active {
-  display: flex;
-}
-
-nav a {
-  margin: 12px 0;
-}
-
-.menu-toggle {
-  display: block;
-}
-
-.hero h1 { font-size: 48px; }
-.hero p { font-size: 20px; }
-h2 { font-size: 30px; }
-section p { font-size: 18px; }
-
+  .hero h1 { font-size: 50px; }
+  .hero-subtitle { font-size: 20px; }
+  nav { padding: 18px 6%; }
+  .section { padding: 110px 6%; }
+  .nav-links { display: none; }
 }
 
 </style>
@@ -195,78 +176,159 @@ section p { font-size: 18px; }
 <body>
 
 <nav>
-  <h3>Sali Labs</h3>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <div class="nav-links" id="navLinks">
-    <a href="#positioning">Platform</a>
-    <a href="#vision">Vision</a>
-    <a href="#architect">Direction</a>
+  <div class="logo">Sali Labs</div>
+  <div class="nav-links">
+    <a href="#platform">Platform</a>
+    <a href="#direction">Vision</a>
+    <a href="#partnerships">Partnerships</a>
+    <a href="#whitepaper">Framework</a>
+    <a href="#governance">Governance</a>
+    <a href="#contact">Engagement</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Sali Labs</h1>
-  <p>Architecting Intelligent Infrastructure for Global Systems.</p>
-  <div class="signature">
-    ARTIFICIAL INTELLIGENCE × STRUCTURAL SYSTEMS × GLOBAL SCALE
+  <div class="hero-content">
+    <h1>Sali Labs</h1>
+    <p class="hero-subtitle">
+      Advancing Infrastructure Intelligence at Global Institutional Scale.
+    </p>
+    <div class="signature">
+      STRATEGIC INFRASTRUCTURE × SYSTEM ARCHITECTURE × GLOBAL DEPLOYMENT
+    </div>
   </div>
 </section>
 
-<section class="positioning reveal" id="positioning">
-  <h2>Strategic Positioning</h2>
-  <p>
-    Sali Labs operates as a strategic global infrastructure laboratory,
-    architecting AI-driven structural intelligence systems designed for
-    scalable multi-region deployment and long-term systemic resilience.
+<!-- PLATFORM -->
+<section class="section" id="platform">
+  <h2>Institutional Capability Framework</h2>
+  <p class="section-intro">
+    Sali Labs develops integrated infrastructure intelligence systems designed for national-scale resilience and multi-region deployment.
   </p>
+  <div class="grid">
+    <div>
+      <h3>Strategic Infrastructure Modeling</h3>
+      <p>Advanced computational modeling integrating structural mechanics and predictive analytics.</p>
+    </div>
+    <div>
+      <h3>Scalable Systems Architecture</h3>
+      <p>Modular engineering intelligence platforms engineered for regional and transnational expansion.</p>
+    </div>
+    <div>
+      <h3>Global Deployment Framework</h3>
+      <p>Institutional-grade architecture enabling phased structural implementation across economies.</p>
+    </div>
+  </div>
 </section>
 
-<section class="vision reveal" id="vision">
-  <h2>Vision</h2>
-  <p>
-    Sali Labs operates at the intersection of structural engineering,
-    computational modeling, and artificial intelligence to develop
-    scalable intelligent infrastructure systems capable of supporting
-    long-term global transformation.
+<!-- DIRECTION -->
+<section class="section" id="direction">
+  <h2>Strategic Global Direction</h2>
+  <p class="section-intro">
+    Operating with a long-horizon mandate advancing infrastructure intelligence as a foundational pillar of resilient global development.
   </p>
+  <div class="grid">
+    <div>
+      <h3>Long-Term Systems Thinking</h3>
+      <p>Generational foresight guiding infrastructure resilience strategies.</p>
+    </div>
+    <div>
+      <h3>Institutional-Scale Integration</h3>
+      <p>Alignment with national policy and global coordination frameworks.</p>
+    </div>
+    <div>
+      <h3>Future-Ready Infrastructure</h3>
+      <p>AI and structural science converging into adaptive infrastructure ecosystems.</p>
+    </div>
+  </div>
 </section>
 
-<section class="architect reveal" id="architect">
-  <h2>Architectural Direction</h2>
-  <p>
-    Sali Labs is architected and directed by a structural systems engineer
-    focused on integrating artificial intelligence with large-scale
-    infrastructure frameworks.
+<!-- PARTNERSHIPS -->
+<section class="section" id="partnerships">
+  <h2>Global Partnerships</h2>
+  <p class="section-intro">
+    Engagement with institutions, infrastructure authorities, research bodies, and strategic development initiatives.
   </p>
+  <div class="grid">
+    <div>
+      <h3>Government & Public Sector</h3>
+      <p>Integration of AI-driven modeling within national infrastructure systems.</p>
+    </div>
+    <div>
+      <h3>Strategic Development Projects</h3>
+      <p>Forward-looking infrastructure initiatives requiring advanced system architecture.</p>
+    </div>
+    <div>
+      <h3>Academic & Research Institutions</h3>
+      <p>Development of next-generation engineering intelligence methodologies.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHITEPAPER -->
+<section class="section" id="whitepaper">
+  <h2>Strategic Infrastructure Intelligence Framework</h2>
+  <p class="section-intro">
+    A structured institutional framework formalizing AI integration within large-scale infrastructure systems.
+  </p>
+  <div class="grid">
+    <div>
+      <h3>Conceptual Architecture</h3>
+      <p>Multi-layer structural intelligence models integrating computational mechanics and predictive analytics.</p>
+    </div>
+    <div>
+      <h3>Institutional Alignment</h3>
+      <p>Alignment with governmental planning strategies and development programs.</p>
+    </div>
+    <div>
+      <h3>Phased Deployment Model</h3>
+      <p>Long-horizon roadmap for controlled scaling across regions.</p>
+    </div>
+  </div>
+  <div class="note">
+    A formal strategic document is under structured development and available for institutional consultation.
+  </div>
+</section>
+
+<!-- GOVERNANCE -->
+<section class="section" id="governance">
+  <h2>Governance & Advisory Structure</h2>
+  <p class="section-intro">
+    Structured governance ensuring strategic oversight, technical integrity, and responsible AI integration.
+  </p>
+  <div class="grid">
+    <div>
+      <h3>Strategic Oversight</h3>
+      <p>System-level infrastructure direction and resilience planning.</p>
+    </div>
+    <div>
+      <h3>Technical Advisory</h3>
+      <p>Alignment with structural science and AI-driven infrastructure analytics.</p>
+    </div>
+    <div>
+      <h3>Ethical & System Integrity</h3>
+      <p>Commitment to responsible AI deployment and structural safety.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2>Institutional Engagement</h2>
+  <p class="section-intro">
+    Formal engagement with governmental institutions and strategic infrastructure initiatives.
+  </p>
+  <div class="contact-block">
+    For structured consultation and institutional correspondence:
+    <div class="contact-email">contact@salilabs.com</div>
+    All engagement inquiries are reviewed through internal evaluation to ensure long-term strategic alignment.
+  </div>
 </section>
 
 <footer>
-  © 2026 Sali Labs. Strategic Global Infrastructure Lab.
+  © 2026 Sali Labs — Strategic Global Infrastructure Intelligence Institution
 </footer>
-
-<script>
-
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
-}
-
-const revealElements = document.querySelectorAll('.reveal');
-
-function revealOnScroll() {
-  revealElements.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-    const revealPoint = 120;
-    if (elementTop < windowHeight - revealPoint) {
-      el.classList.add('active');
-    }
-  });
-}
-
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-
-</script>
 
 </body>
 </html>
