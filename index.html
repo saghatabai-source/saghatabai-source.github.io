@@ -5,106 +5,115 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sali Labs</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 <style>
-body{
-    margin:0;
-    font-family:'Segoe UI',sans-serif;
-    background:linear-gradient(135deg,#04121f,#0b2b3a,#123b4e);
-    color:white;
-    text-align:center;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0d0d0f;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
 }
 
-.logo{
-    width:280px;
-    max-width:80%;
-    margin-bottom:25px;
+.hero {
+  text-align: center;
+  padding: 140px 20px;
 }
 
-h1{
-    font-size:56px;
-    margin:10px 0;
-    letter-spacing:1px;
+.hero h1 {
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: -2px;
 }
 
-.tagline{
-    font-size:24px;
-    opacity:0.8;
-    margin-bottom:50px;
+.hero p {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #9ca3af;
 }
 
-.section{
-    padding:80px 20px;
-    max-width:900px;
-    margin:auto;
+.section {
+  padding: 100px 0;
+  border-top: 1px solid #1f1f23;
 }
 
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-.card{
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.1);
-    padding:25px;
-    border-radius:16px;
-    width:240px;
-    backdrop-filter:blur(6px);
-    transition:0.3s;
+.section p {
+  color: #9ca3af;
+  max-width: 750px;
 }
 
-.card:hover{
-    transform:translateY(-6px);
-    background:rgba(255,255,255,0.12);
+.projects {
+  margin-top: 30px;
 }
 
-footer{
-    padding:40px;
-    opacity:0.6;
-    font-size:14px;
+.projects li {
+  margin-bottom: 15px;
+  color: #d1d5db;
+  font-size: 18px;
+}
+
+.footer {
+  text-align: center;
+  padding: 50px;
+  border-top: 1px solid #1f1f23;
+  color: #6b7280;
+  font-size: 14px;
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="hero">
-    <img class="logo" src="SaliLabs_Logo_Master_کامل_..." alt="Sali Labs Logo">
-    <h1>Sali Labs</h1>
-    <div class="tagline">Engineering the Future with Intelligence</div>
+  <h1>Sali Labs</h1>
+  <p>Engineering × Artificial Intelligence × Innovation</p>
 </div>
 
-<div class="section">
+<div class="container">
+
+  <div class="section">
     <h2>About</h2>
     <p>
-    Sali Labs builds intelligent engineering applications combining AI, structural thinking, and real-world innovation.
+      Sali Labs is a research-driven engineering initiative focused on the integration of structural engineering and artificial intelligence.
+      We design intelligent systems, data-driven infrastructure solutions, and next-generation monitoring platforms.
     </p>
+  </div>
+
+  <div class="section">
+    <h2>Core Projects</h2>
+    <ul class="projects">
+      <li>Earthquake Monitoring Systems</li>
+      <li>Smart Price Intelligence Platform</li>
+      <li>AI-Driven Structural Optimization</li>
+      <li>Intelligent Infrastructure Research</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Vision</h2>
+    <p>
+      Our mission is to build scalable intelligent engineering systems that shape the future of infrastructure development worldwide.
+    </p>
+  </div>
+
 </div>
 
-<div class="section">
-    <h2>Our Ecosystem</h2>
-    <div class="cards">
-        <div class="card">Earthquake Monitor</div>
-        <div class="card">Smart Price Finder</div>
-        <div class="card">Future AI Systems</div>
-    </div>
+<div class="footer">
+  © 2026 Sali Labs — Engineering the Future with Intelligence
 </div>
-
-<footer>
-© Sali Labs — Intelligent Engineering Systems
-</footer>
 
 </body>
 </html>
