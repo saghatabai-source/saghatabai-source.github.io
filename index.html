@@ -9,8 +9,6 @@
 
 <style>
 
-/* ===== RESET ===== */
-
 * {
   margin: 0;
   padding: 0;
@@ -26,8 +24,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== BACKGROUND DEPTH ===== */
-
+/* Background Depth */
 body::before {
   content: "";
   position: fixed;
@@ -45,8 +42,7 @@ body::before {
   to { transform: translate(200px,150px); }
 }
 
-/* ===== NAV ===== */
-
+/* NAV */
 nav {
   position: fixed;
   width: 100%;
@@ -81,8 +77,14 @@ nav a:hover {
   color: #fff;
 }
 
-/* ===== HERO ===== */
+/* Mobile Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
 
+/* HERO */
 .hero {
   height: 100vh;
   display: flex;
@@ -113,8 +115,7 @@ nav a:hover {
   color: #4d8cff;
 }
 
-/* ===== SECTIONS ===== */
-
+/* Sections */
 section {
   padding: 140px 10%;
 }
@@ -135,8 +136,7 @@ section p {
   margin-bottom: 25px;
 }
 
-/* ===== REVEAL ===== */
-
+/* Reveal */
 .reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -148,8 +148,7 @@ section p {
   transform: translateY(0);
 }
 
-/* ===== FOOTER ===== */
-
+/* Footer */
 footer {
   padding: 60px 10%;
   font-size: 14px;
@@ -157,23 +156,30 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* ===== MOBILE FIX ===== */
-
+/* MOBILE */
 @media(max-width:768px){
 
-nav {
+.nav-links {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: #020611;
+  width: 100%;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 18px 8%;
+  display: none;
+  padding: 20px 8%;
 }
 
-.nav-links {
-  flex-direction: column;
-  margin-top: 10px;
+.nav-links.active {
+  display: flex;
 }
 
 nav a {
-  margin: 6px 0 0 0;
+  margin: 12px 0;
+}
+
+.menu-toggle {
+  display: block;
 }
 
 .hero h1 { font-size: 48px; }
@@ -190,7 +196,8 @@ section p { font-size: 18px; }
 
 <nav>
   <h3>Sali Labs</h3>
-  <div class="nav-links">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navLinks">
     <a href="#positioning">Platform</a>
     <a href="#vision">Vision</a>
     <a href="#architect">Direction</a>
@@ -231,11 +238,6 @@ section p { font-size: 18px; }
     focused on integrating artificial intelligence with large-scale
     infrastructure frameworks.
   </p>
-  <p>
-    The laboratory’s long-term objective is to advance intelligent structural
-    architectures capable of global deployment, systemic resilience,
-    and strategic scalability.
-  </p>
 </section>
 
 <footer>
@@ -243,6 +245,11 @@ section p { font-size: 18px; }
 </footer>
 
 <script>
+
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
 const revealElements = document.querySelectorAll('.reveal');
 
 function revealOnScroll() {
@@ -258,6 +265,7 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
+
 </script>
 
 </body>
