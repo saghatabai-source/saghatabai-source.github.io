@@ -22,6 +22,7 @@ body {
   background: radial-gradient(circle at 30% 30%, #0b1d3a 0%, #020611 60%);
   color: #ffffff;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 /* ===== NAV ===== */
@@ -77,7 +78,7 @@ nav a:hover {
 
 .hero p {
   font-size: 26px;
-  max-width: 600px;
+  max-width: 650px;
   margin-bottom: 30px;
   color: #d6d6d6;
 }
@@ -88,58 +89,49 @@ nav a:hover {
   color: #4d8cff;
 }
 
+/* ===== SECTION BASE ===== */
+
+section {
+  padding: 140px 10%;
+}
+
+/* ===== REVEAL ANIMATION ===== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ===== POSITIONING ===== */
 
 .positioning {
-  padding: 140px 10%;
   background: #030a1d;
 }
 
-.positioning h2 {
-  font-size: 42px;
-  margin-bottom: 35px;
-}
-
-.positioning p {
-  font-size: 21px;
-  max-width: 900px;
-  color: #cfcfcf;
-}
-
-/* ===== VISION ===== */
-
-.vision {
-  padding: 140px 10%;
-}
-
-.vision h2 {
-  font-size: 42px;
-  margin-bottom: 35px;
-}
-
-.vision p {
-  font-size: 21px;
-  max-width: 900px;
-  color: #cfcfcf;
-}
-
-/* ===== ARCHITECT ===== */
-
-.architect {
-  padding: 140px 10%;
-  background: #020611;
-}
-
+.positioning h2,
+.vision h2,
 .architect h2 {
   font-size: 42px;
   margin-bottom: 35px;
 }
 
+.positioning p,
+.vision p,
 .architect p {
   font-size: 21px;
   max-width: 900px;
-  color: #bfbfbf;
-  margin-bottom: 25px;
+  color: #cfcfcf;
+  line-height: 1.9;
+}
+
+.architect {
+  background: #020611;
 }
 
 /* ===== FOOTER ===== */
@@ -212,7 +204,7 @@ footer {
   </div>
 </section>
 
-<section class="positioning" id="positioning">
+<section class="positioning reveal" id="positioning">
   <h2>Strategic Positioning</h2>
   <p>
     Sali Labs operates as a strategic global infrastructure laboratory,
@@ -221,7 +213,7 @@ footer {
   </p>
 </section>
 
-<section class="vision" id="vision">
+<section class="vision reveal" id="vision">
   <h2>Vision</h2>
   <p>
     Sali Labs operates at the intersection of structural engineering,
@@ -231,14 +223,13 @@ footer {
   </p>
 </section>
 
-<section class="architect" id="architect">
+<section class="architect reveal" id="architect">
   <h2>Architectural Direction</h2>
   <p>
     Sali Labs is architected and directed by a structural systems engineer
     focused on integrating artificial intelligence with large-scale
     infrastructure frameworks.
   </p>
-
   <p>
     The laboratory’s long-term objective is to advance intelligent structural
     architectures capable of global deployment, systemic resilience,
@@ -249,6 +240,25 @@ footer {
 <footer>
   © 2026 Sali Labs. Strategic Global Infrastructure Lab.
 </footer>
+
+<script>
+const revealElements = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  revealElements.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    const revealPoint = 120;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
 
 </body>
 </html>
