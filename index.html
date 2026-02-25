@@ -1,12 +1,9 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sali Labs | Engineering × AI × Innovation</title>
+<title>Sali Labs | Advanced Engineering & Artificial Intelligence Laboratory</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
@@ -15,58 +12,121 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0d0d0f;
+  background: radial-gradient(circle at 20% 30%, #111827, #050507 70%);
   color: #ffffff;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(10,10,12,0.6);
+  backdrop-filter: blur(10px);
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  z-index: 1000;
+}
+
+nav h3 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
 }
 
 .hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 120px 20px;
+  padding: 0 20px;
 }
 
 .hero h1 {
-  font-size: 64px;
+  font-size: 72px;
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
 }
 
 .hero p {
-  font-size: 20px;
   margin-top: 20px;
-  color: #a0a0a0;
+  font-size: 20px;
+  color: #9ca3af;
+  max-width: 700px;
 }
 
 .section {
-  margin-top: 120px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 120px 20px;
 }
 
 .section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 38px;
+  margin-bottom: 30px;
 }
 
 .section p {
   font-size: 18px;
-  color: #bbbbbb;
+  color: #cbd5e1;
   max-width: 800px;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,255,255,0.15);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.card p {
+  color: #9ca3af;
+  font-size: 15px;
+}
+
 .footer {
-  margin-top: 140px;
-  padding-top: 40px;
-  border-top: 1px solid #222;
   text-align: center;
+  padding: 60px 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
   color: #777;
   font-size: 14px;
 }
@@ -75,34 +135,63 @@ body {
 
 <body>
 
-<div class="hero">
+<nav>
+  <h3>Sali Labs</h3>
+  <div>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#vision">Vision</a>
+  </div>
+</nav>
+
+<section class="hero">
   <h1>Sali Labs</h1>
-  <p>Engineering × Artificial Intelligence × Innovation</p>
-</div>
+  <p>
+    Advanced Engineering & Artificial Intelligence Laboratory  
+    Designing Intelligent Infrastructure Systems for a Global Future.
+  </p>
+</section>
 
-<div class="container">
+<section id="about" class="section">
+  <h2>About</h2>
+  <p>
+    Sali Labs is a research-driven engineering laboratory focused on AI-powered 
+    structural optimization, intelligent infrastructure systems, and scalable 
+    technology platforms engineered for high-impact global deployment.
+  </p>
+</section>
 
-  <div class="section">
-    <h2>About</h2>
-    <p>
-      Sali Labs is a research-driven engineering laboratory focused on
-      intelligent infrastructure systems, AI-powered structural optimization,
-      and scalable technology platforms designed for global impact.
-    </p>
+<section id="research" class="section">
+  <h2>Research Domains</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>AI-Driven Structural Optimization</h3>
+      <p>High-performance computational models enhancing structural efficiency and resilience.</p>
+    </div>
+
+    <div class="card">
+      <h3>Intelligent Infrastructure Systems</h3>
+      <p>Data-driven smart systems for next-generation urban development.</p>
+    </div>
+
+    <div class="card">
+      <h3>Advanced Engineering Platforms</h3>
+      <p>Scalable AI frameworks integrating engineering precision with automation.</p>
+    </div>
   </div>
+</section>
 
-  <div class="section">
-    <h2>Vision</h2>
-    <p>
-      Our mission is to build high-performance intelligent engineering
-      systems that redefine infrastructure development worldwide.
-    </p>
-  </div>
+<section id="vision" class="section">
+  <h2>Vision</h2>
+  <p>
+    Our mission is to redefine global infrastructure development by building 
+    intelligent, high-performance engineering systems powered by artificial intelligence.
+  </p>
+</section>
 
-  <div class="footer">
-    © 2026 Sali Labs — Engineering the Future with Intelligence
-  </div>
-
+<div class="footer">
+  © 2026 Sali Labs — Engineering the Future with Intelligence
 </div>
 
 </body>
