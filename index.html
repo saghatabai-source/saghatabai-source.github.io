@@ -17,7 +17,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at 50% 20%, #0f172a 0%, #050507 60%);
+  background: radial-gradient(circle at 50% 10%, #0f172a 0%, #050507 65%);
   color: #ffffff;
   line-height: 1.7;
 }
@@ -28,9 +28,9 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(10,10,15,0.7);
+  background: rgba(10,10,15,0.75);
   backdrop-filter: blur(14px);
-  padding: 20px 60px;
+  padding: 22px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +46,7 @@ nav h3 {
 nav a {
   color: #9ca3af;
   text-decoration: none;
-  margin-left: 30px;
+  margin-left: 32px;
   font-size: 14px;
   transition: 0.3s ease;
 }
@@ -62,36 +62,34 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
+  padding: 0 8%;
   padding-top: 80px;
 }
 
 .hero h1 {
-  font-size: 88px;
+  font-size: 92px;
   font-weight: 800;
   letter-spacing: -2px;
   text-shadow: 0 0 60px rgba(59,130,246,0.15);
 }
 
 .hero p {
-  margin-top: 30px;
+  margin-top: 35px;
   font-size: 24px;
   font-weight: 500;
   color: #d1d5db;
+  max-width: 700px;
 }
 
 .signature {
-  margin-top: 45px;
-  font-size: 14px;
+  margin-top: 50px;
+  font-size: 13px;
   letter-spacing: 4px;
   color: #3b82f6;
-  opacity: 0.9;
   text-transform: uppercase;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section {
   max-width: 1100px;
@@ -108,7 +106,7 @@ nav a:hover {
 .section p {
   font-size: 18px;
   color: #cbd5e1;
-  max-width: 820px;
+  max-width: 850px;
 }
 
 /* GRID */
@@ -129,7 +127,7 @@ nav a:hover {
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   border-color: rgba(59,130,246,0.6);
 }
 
@@ -148,8 +146,8 @@ nav a:hover {
 
 .founder-container {
   display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 90px;
+  grid-template-columns: 380px 1fr;
+  gap: 100px;
   align-items: center;
 }
 
@@ -186,6 +184,47 @@ nav a:hover {
   color: #6b7280;
   font-size: 14px;
 }
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  nav {
+    padding: 18px 25px;
+  }
+
+  nav a {
+    margin-left: 18px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+    line-height: 1.05;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .signature {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .section {
+    padding: 120px 20px;
+  }
+
+  .section h2 {
+    font-size: 32px;
+  }
+
+  .founder-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+}
 </style>
 </head>
 
@@ -195,7 +234,7 @@ nav a:hover {
   <h3>Sali Labs</h3>
   <div>
     <a href="#vision">Vision</a>
-    <a href="#scalability">Scalability</a>
+    <a href="#platform">Platform</a>
     <a href="#founder">Founder</a>
   </div>
 </nav>
@@ -212,38 +251,38 @@ nav a:hover {
   <h2>Vision</h2>
   <p>
     Sali Labs operates at the intersection of structural engineering,
-    computational modeling, and artificial intelligence to develop
-    scalable intelligent infrastructure systems for long-term global deployment.
+    computational modeling, and artificial intelligence to design scalable
+    intelligent infrastructure architectures for global deployment.
   </p>
 </section>
 
-<section id="scalability" class="section">
+<section id="platform" class="section">
   <h2>Scalable Engineering Intelligence Platform</h2>
 
   <p>
-    Sali Labs is structured as a modular engineering intelligence platform
-    designed for scalable deployment across infrastructure domains.
+    A modular AI-driven engineering platform designed for long-horizon,
+    multi-region infrastructure deployment.
   </p>
 
   <div class="grid">
     <div class="card">
       <h3>Modular AI Infrastructure</h3>
       <p>
-        Expandable computational models adaptable across structural and seismic systems.
+        Expandable computational models adaptable across structural and seismic domains.
       </p>
     </div>
 
     <div class="card">
       <h3>Platform-Oriented Architecture</h3>
       <p>
-        Engineering intelligence frameworks built for multi-region scalability.
+        Frameworks engineered for scalable digital deployment across regions.
       </p>
     </div>
 
     <div class="card">
       <h3>Long-Term Global Deployment</h3>
       <p>
-        Phased expansion of AI-powered infrastructure systems worldwide.
+        Phased expansion of intelligent infrastructure systems worldwide.
       </p>
     </div>
   </div>
@@ -252,7 +291,7 @@ nav a:hover {
 <section id="founder" class="section">
   <div class="founder-container">
     <div class="founder-image">
-      <img src="founder.jpg" alt="Saleh Aghatabai">
+      <img src="founder.jpg" alt="Founder">
     </div>
 
     <div class="founder-content">
@@ -261,13 +300,12 @@ nav a:hover {
       <p class="title">Founder & Engineering Intelligence Architect</p>
 
       <p>
-        Structural engineer integrating artificial intelligence into
-        scalable engineering systems and intelligent infrastructure platforms.
+        Structural engineer integrating artificial intelligence into scalable
+        infrastructure systems and engineering intelligence platforms.
       </p>
 
       <p>
-        Designing long-horizon infrastructure intelligence architectures
-        for global-scale deployment.
+        Focused on long-term global deployment of AI-powered structural systems.
       </p>
     </div>
   </div>
