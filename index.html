@@ -9,20 +9,40 @@
 
 <style>
 
-/* ===== RESET ===== */
+/* ===== GLOBAL RESET ===== */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at 30% 30%, #0b1d3a 0%, #020611 60%);
+  background: #020611;
   color: #ffffff;
   line-height: 1.7;
   overflow-x: hidden;
+}
+
+/* ===== DYNAMIC BACKGROUND DEPTH ===== */
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 900px;
+  height: 900px;
+  top: -200px;
+  left: -200px;
+  background: radial-gradient(circle, rgba(40,90,255,0.15) 0%, transparent 70%);
+  animation: moveLight 18s infinite alternate ease-in-out;
+  z-index: -1;
+}
+
+@keyframes moveLight {
+  from { transform: translate(0,0); }
+  to { transform: translate(200px,150px); }
 }
 
 /* ===== NAV ===== */
@@ -50,10 +70,11 @@ nav a {
   text-decoration: none;
   margin-left: 30px;
   font-size: 14px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 /* ===== HERO ===== */
@@ -89,13 +110,34 @@ nav a:hover {
   color: #4d8cff;
 }
 
-/* ===== SECTION BASE ===== */
+/* ===== SECTIONS ===== */
 
 section {
   padding: 140px 10%;
 }
 
-/* ===== REVEAL ANIMATION ===== */
+.positioning {
+  background: #030a1d;
+}
+
+.architect {
+  background: #01040c;
+}
+
+h2 {
+  font-size: 42px;
+  margin-bottom: 35px;
+}
+
+section p {
+  font-size: 21px;
+  max-width: 900px;
+  color: #cfcfcf;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+/* ===== SCROLL REVEAL ===== */
 
 .reveal {
   opacity: 0;
@@ -108,32 +150,6 @@ section {
   transform: translateY(0);
 }
 
-/* ===== POSITIONING ===== */
-
-.positioning {
-  background: #030a1d;
-}
-
-.positioning h2,
-.vision h2,
-.architect h2 {
-  font-size: 42px;
-  margin-bottom: 35px;
-}
-
-.positioning p,
-.vision p,
-.architect p {
-  font-size: 21px;
-  max-width: 900px;
-  color: #cfcfcf;
-  line-height: 1.9;
-}
-
-.architect {
-  background: #020611;
-}
-
 /* ===== FOOTER ===== */
 
 footer {
@@ -143,42 +159,24 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* ===== ANIMATION ===== */
+/* ===== HERO ANIMATION ===== */
 
 @keyframes fadeInHero {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== RESPONSIVE ===== */
 
 @media(max-width:768px){
 
-.hero h1 {
-  font-size: 52px;
-}
+.hero h1 { font-size: 52px; }
 
-.hero p {
-  font-size: 20px;
-}
+.hero p { font-size: 20px; }
 
-.positioning h2,
-.vision h2,
-.architect h2 {
-  font-size: 32px;
-}
+h2 { font-size: 32px; }
 
-.positioning p,
-.vision p,
-.architect p {
-  font-size: 18px;
-}
+section p { font-size: 18px; }
 
 }
 
@@ -190,8 +188,8 @@ footer {
 <nav>
   <h3>Sali Labs</h3>
   <div>
-    <a href="#vision">Vision</a>
     <a href="#positioning">Platform</a>
+    <a href="#vision">Vision</a>
     <a href="#architect">Direction</a>
   </div>
 </nav>
