@@ -1,319 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sali Labs | Engineering Intelligence</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sali Labs | Engineering Intelligence</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+  <style>
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at 50% 10%, #0f172a 0%, #050507 65%);
-  color: #ffffff;
-  line-height: 1.7;
-}
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-/* NAVIGATION */
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 50% 10%, #0f172a 0%, #050507 65%);
+      color: #ffffff;
+      line-height: 1.7;
+    }
 
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(10,10,15,0.75);
-  backdrop-filter: blur(14px);
-  padding: 22px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  z-index: 1000;
-}
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(10,10,15,0.75);
+      backdrop-filter: blur(14px);
+      padding: 22px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      z-index: 1000;
+    }
 
-nav h3 {
-  font-weight: 600;
-  letter-spacing: 1px;
-}
+    nav h3 {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
 
-nav a {
-  color: #9ca3af;
-  text-decoration: none;
-  margin-left: 32px;
-  font-size: 14px;
-  transition: 0.3s ease;
-}
+    nav a {
+      color: #9ca3af;
+      text-decoration: none;
+      margin-left: 32px;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
 
-nav a:hover {
-  color: #ffffff;
-}
+    nav a:hover {
+      color: #ffffff;
+    }
 
-/* HERO */
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 8%;
+      padding-top: 80px;
+      animation: fadeInHero 1.4s ease-out;
+    }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 8%;
-  padding-top: 80px;
-}
+    @keyframes fadeInHero {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-.hero h1 {
-  font-size: 92px;
-  font-weight: 800;
-  letter-spacing: -2px;
-  text-shadow: 0 0 60px rgba(59,130,246,0.15);
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      pointer-events: none;
+    }
 
-.hero p {
-  margin-top: 35px;
-  font-size: 24px;
-  font-weight: 500;
-  color: #d1d5db;
-  max-width: 700px;
-}
+    .hero h1 {
+      font-size: 92px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      text-shadow: 0 0 60px rgba(59,130,246,0.15);
+    }
 
-.signature {
-  margin-top: 50px;
-  font-size: 13px;
-  letter-spacing: 4px;
-  color: #3b82f6;
-  text-transform: uppercase;
-}
+    .hero p {
+      margin-top: 25px;
+      font-size: 26px;
+      font-weight: 500;
+      color: #d1d5db;
+      max-width: 720px;
+      line-height: 1.4;
+    }
 
-/* SECTION */
+    .signature {
+      margin-top: 40px;
+      font-size: 12px;
+      letter-spacing: 5px;
+      color: #3b82f6;
+      text-transform: uppercase;
+    }
 
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 160px 20px;
-}
+    /* ===== SECTION ===== */
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 160px 20px;
+    }
 
-.section h2 {
-  font-size: 44px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
+    .section h2 {
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
 
-.section p {
-  font-size: 18px;
-  color: #cbd5e1;
-  max-width: 850px;
-}
+    .section p {
+      font-size: 18px;
+      color: #cbd5e1;
+      max-width: 850px;
+    }
 
-/* GRID */
+    /* ===== GRID ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 50px;
+      margin-top: 70px;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 50px;
-  margin-top: 70px;
-}
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 45px;
+      border-radius: 18px;
+      transition: 0.4s ease;
+    }
 
-.card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 45px;
-  border-radius: 18px;
-  transition: 0.4s ease;
-}
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(59,130,246,0.6);
+    }
 
-.card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(59,130,246,0.6);
-}
+    .card h3 {
+      margin-bottom: 18px;
+      font-size: 21px;
+    }
 
-.card h3 {
-  margin-bottom: 18px;
-  font-size: 21px;
-}
+    .card p {
+      color: #cbd5e1;
+      font-size: 15px;
+      line-height: 1.8;
+    }
 
-.card p {
-  color: #cbd5e1;
-  font-size: 15px;
-  line-height: 1.8;
-}
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 100px 20px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      color: #6b7280;
+      font-size: 14px;
+    }
 
-/* FOUNDER */
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
 
-.founder-container {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 100px;
-  align-items: center;
-}
+      nav {
+        padding: 18px 25px;
+      }
 
-.founder-image img {
-  width: 100%;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.1);
-}
+      nav a {
+        margin-left: 18px;
+      }
 
-.founder-content h3 {
-  font-size: 30px;
-  margin-top: 10px;
-}
+      .hero h1 {
+        font-size: 58px;
+        line-height: 1.05;
+      }
 
-.founder-content .title {
-  color: #3b82f6;
-  margin-bottom: 30px;
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
+      .hero p {
+        font-size: 18px;
+      }
 
-.founder-content p {
-  margin-bottom: 20px;
-  color: #cbd5e1;
-}
+      .signature {
+        font-size: 11px;
+        letter-spacing: 3px;
+      }
 
-/* FOOTER */
+      .section {
+        padding: 120px 20px;
+      }
 
-.footer {
-  text-align: center;
-  padding: 100px 20px;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  color: #6b7280;
-  font-size: 14px;
-}
+      .section h2 {
+        font-size: 32px;
+      }
 
-/* MOBILE */
+    }
 
-@media (max-width: 768px) {
-
-  nav {
-    padding: 18px 25px;
-  }
-
-  nav a {
-    margin-left: 18px;
-  }
-
-  .hero h1 {
-    font-size: 58px;
-    line-height: 1.05;
-  }
-
-  .hero p {
-    font-size: 18px;
-  }
-
-  .signature {
-    font-size: 11px;
-    letter-spacing: 3px;
-  }
-
-  .section {
-    padding: 120px 20px;
-  }
-
-  .section h2 {
-    font-size: 32px;
-  }
-
-  .founder-container {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-}
-</style>
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <h3>Sali Labs</h3>
-  <div>
-    <a href="#vision">Vision</a>
-    <a href="#platform">Platform</a>
-    <a href="#founder">Founder</a>
+  <nav>
+    <h3>Sali Labs</h3>
+    <div>
+      <a href="#vision">Vision</a>
+      <a href="#platform">Platform</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Sali Labs</h1>
+    <p>
+      Architecting Intelligent Infrastructure<br>
+      for Global Systems.
+    </p>
+    <div class="signature">
+      Artificial Intelligence × Structural Systems × Global Scale
+    </div>
+  </section>
+
+  <section id="vision" class="section">
+    <h2>Vision</h2>
+    <p>
+      Sali Labs operates at the intersection of structural engineering,
+      computational modeling, and artificial intelligence to design scalable
+      intelligent infrastructure architectures for global deployment.
+    </p>
+  </section>
+
+  <section id="platform" class="section">
+    <h2>Scalable Engineering Intelligence Platform</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Modular AI Infrastructure</h3>
+        <p>Expandable computational models adaptable across structural and seismic domains.</p>
+      </div>
+      <div class="card">
+        <h3>Platform-Oriented Architecture</h3>
+        <p>Frameworks engineered for scalable digital deployment across regions.</p>
+      </div>
+      <div class="card">
+        <h3>Long-Term Global Deployment</h3>
+        <p>Phased expansion of intelligent infrastructure systems worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    © 2026 Sali Labs — Engineering the Future with Intelligence
   </div>
-</nav>
-
-<section class="hero">
-  <h1>Sali Labs</h1>
-  <p>Engineering Intelligence Infrastructure.</p>
-  <div class="signature">
-    Artificial Intelligence × Structural Systems × Global Scale
-  </div>
-</section>
-
-<section id="vision" class="section">
-  <h2>Vision</h2>
-  <p>
-    Sali Labs operates at the intersection of structural engineering,
-    computational modeling, and artificial intelligence to design scalable
-    intelligent infrastructure architectures for global deployment.
-  </p>
-</section>
-
-<section id="platform" class="section">
-  <h2>Scalable Engineering Intelligence Platform</h2>
-
-  <p>
-    A modular AI-driven engineering platform designed for long-horizon,
-    multi-region infrastructure deployment.
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Modular AI Infrastructure</h3>
-      <p>
-        Expandable computational models adaptable across structural and seismic domains.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Platform-Oriented Architecture</h3>
-      <p>
-        Frameworks engineered for scalable digital deployment across regions.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Long-Term Global Deployment</h3>
-      <p>
-        Phased expansion of intelligent infrastructure systems worldwide.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="founder" class="section">
-  <div class="founder-container">
-    <div class="founder-image">
-      <img src="founder.jpg" alt="Founder">
-    </div>
-
-    <div class="founder-content">
-      <h2>Founder</h2>
-      <h3>Saleh Aghatabai</h3>
-      <p class="title">Founder & Engineering Intelligence Architect</p>
-
-      <p>
-        Structural engineer integrating artificial intelligence into scalable
-        infrastructure systems and engineering intelligence platforms.
-      </p>
-
-      <p>
-        Focused on long-term global deployment of AI-powered structural systems.
-      </p>
-    </div>
-  </div>
-</section>
-
-<div class="footer">
-  © 2026 Sali Labs — Engineering the Future with Intelligence
-</div>
 
 </body>
 </html>
