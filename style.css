@@ -144,3 +144,18 @@ h2::after {
     transform: translateY(0);
   }
 }
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, var(--accent), #00bfff);
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--accent-glow);
+  }
