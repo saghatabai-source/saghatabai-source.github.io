@@ -1,334 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sali Labs | Strategic Global Infrastructure Intelligence Institution</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* ===== RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at 30% 20%, #0b1c3a 0%, #020611 60%);
-  color: #ffffff;
-  line-height: 1.7;
-  scroll-behavior: smooth;
-}
-
-/* ===== NAVIGATION ===== */
-nav {
-  position: fixed;
-  width: 100%;
-  padding: 22px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(2,6,17,0.9);
-  backdrop-filter: blur(12px);
-  z-index: 1000;
-}
-
-.logo {
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 35px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: rgba(255,255,255,0.7);
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-
-.nav-links a:hover {
-  color: #ffffff;
-}
-
-/* ===== HERO ===== */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 8%;
-  animation: fadeIn 1.4s ease-out;
-}
-
-.hero-content {
-  max-width: 800px;
-}
-
-.hero h1 {
-  font-size: 82px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.hero-subtitle {
-  font-size: 26px;
-  font-weight: 300;
-  margin-bottom: 35px;
-  opacity: 0.9;
-}
-
-.signature {
-  font-size: 14px;
-  letter-spacing: 3px;
-  color: #5b8dff;
-}
-
-/* ===== SECTIONS ===== */
-.section {
-  padding: 150px 8%;
-}
-
-.section h2 {
-  font-size: 42px;
-  margin-bottom: 25px;
-  font-weight: 600;
-}
-
-.section-intro {
-  max-width: 800px;
-  opacity: 0.8;
-  margin-bottom: 70px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 60px;
-}
-
-.grid h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
-.grid p {
-  opacity: 0.75;
-}
-
-/* ===== WHITEPAPER NOTE ===== */
-.note {
-  margin-top: 60px;
-  border-left: 3px solid rgba(90,140,255,0.6);
-  padding-left: 20px;
-  opacity: 0.8;
-  font-style: italic;
-}
-
-/* ===== CONTACT ===== */
-.contact-block {
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 50px;
-  max-width: 750px;
-  background: rgba(255,255,255,0.02);
-}
-
-.contact-email {
-  font-size: 22px;
-  font-weight: 600;
-  margin: 25px 0;
-  letter-spacing: 1px;
-  color: #5b8dff;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  padding: 60px 8%;
-  font-size: 13px;
-  opacity: 0.6;
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-/* ===== ANIMATION ===== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-  .hero h1 { font-size: 50px; }
-  .hero-subtitle { font-size: 20px; }
-  nav { padding: 18px 6%; }
-  .section { padding: 110px 6%; }
-  .nav-links { display: none; }
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sali Labs | Strategic Intelligence & Infrastructure Vision</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav>
-  <div class="logo">Sali Labs</div>
-  <div class="nav-links">
-    <a href="#platform">Platform</a>
-    <a href="#direction">Vision</a>
-    <a href="#partnerships">Partnerships</a>
-    <a href="#whitepaper">Framework</a>
-    <a href="#governance">Governance</a>
-    <a href="#contact">Engagement</a>
+  <div class="nav">
+    <div><strong>Sali Labs</strong></div>
+    <div>
+      <a href="research.html">Research</a>
+      <a href="strategy.html">Strategy</a>
+      <a href="about.html">About</a>
+    </div>
   </div>
-</nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Sali Labs</h1>
-    <p class="hero-subtitle">
-      Advancing Infrastructure Intelligence at Global Institutional Scale.
+  <section class="hero">
+    <h1>Engineering Strategic Futures</h1>
+    <p>
+      Sali Labs operates at the intersection of advanced engineering,
+      strategic infrastructure, and institutional collaboration.
+      We design long-term systems aligned with national transformation agendas.
     </p>
-    <div class="signature">
-      STRATEGIC INFRASTRUCTURE × SYSTEM ARCHITECTURE × GLOBAL DEPLOYMENT
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- PLATFORM -->
-<section class="section" id="platform">
-  <h2>Institutional Capability Framework</h2>
-  <p class="section-intro">
-    Sali Labs develops integrated infrastructure intelligence systems designed for national-scale resilience and multi-region deployment.
-  </p>
-  <div class="grid">
-    <div>
-      <h3>Strategic Infrastructure Modeling</h3>
-      <p>Advanced computational modeling integrating structural mechanics and predictive analytics.</p>
-    </div>
-    <div>
-      <h3>Scalable Systems Architecture</h3>
-      <p>Modular engineering intelligence platforms engineered for regional and transnational expansion.</p>
-    </div>
-    <div>
-      <h3>Global Deployment Framework</h3>
-      <p>Institutional-grade architecture enabling phased structural implementation across economies.</p>
-    </div>
-  </div>
-</section>
+  <div class="container">
+    <h2>Core Domains</h2>
 
-<!-- DIRECTION -->
-<section class="section" id="direction">
-  <h2>Strategic Global Direction</h2>
-  <p class="section-intro">
-    Operating with a long-horizon mandate advancing infrastructure intelligence as a foundational pillar of resilient global development.
-  </p>
-  <div class="grid">
-    <div>
-      <h3>Long-Term Systems Thinking</h3>
-      <p>Generational foresight guiding infrastructure resilience strategies.</p>
-    </div>
-    <div>
-      <h3>Institutional-Scale Integration</h3>
-      <p>Alignment with national policy and global coordination frameworks.</p>
-    </div>
-    <div>
-      <h3>Future-Ready Infrastructure</h3>
-      <p>AI and structural science converging into adaptive infrastructure ecosystems.</p>
-    </div>
-  </div>
-</section>
+    <div class="card-grid">
 
-<!-- PARTNERSHIPS -->
-<section class="section" id="partnerships">
-  <h2>Global Partnerships</h2>
-  <p class="section-intro">
-    Engagement with institutions, infrastructure authorities, research bodies, and strategic development initiatives.
-  </p>
-  <div class="grid">
-    <div>
-      <h3>Government & Public Sector</h3>
-      <p>Integration of AI-driven modeling within national infrastructure systems.</p>
-    </div>
-    <div>
-      <h3>Strategic Development Projects</h3>
-      <p>Forward-looking infrastructure initiatives requiring advanced system architecture.</p>
-    </div>
-    <div>
-      <h3>Academic & Research Institutions</h3>
-      <p>Development of next-generation engineering intelligence methodologies.</p>
-    </div>
-  </div>
-</section>
+      <div class="card">
+        <h3>Infrastructure Strategy</h3>
+        <p>
+          Long-term structural planning aligned with large-scale national
+          development programs and next-generation urban ecosystems.
+        </p>
+      </div>
 
-<!-- WHITEPAPER -->
-<section class="section" id="whitepaper">
-  <h2>Strategic Infrastructure Intelligence Framework</h2>
-  <p class="section-intro">
-    A structured institutional framework formalizing AI integration within large-scale infrastructure systems.
-  </p>
-  <div class="grid">
-    <div>
-      <h3>Conceptual Architecture</h3>
-      <p>Multi-layer structural intelligence models integrating computational mechanics and predictive analytics.</p>
-    </div>
-    <div>
-      <h3>Institutional Alignment</h3>
-      <p>Alignment with governmental planning strategies and development programs.</p>
-    </div>
-    <div>
-      <h3>Phased Deployment Model</h3>
-      <p>Long-horizon roadmap for controlled scaling across regions.</p>
-    </div>
-  </div>
-  <div class="note">
-    A formal strategic document is under structured development and available for institutional consultation.
-  </div>
-</section>
+      <div class="card">
+        <h3>Research & Systems Modeling</h3>
+        <p>
+          Academic-level structural analysis, risk modeling, and
+          integrated system design for resilient infrastructure.
+        </p>
+      </div>
 
-<!-- GOVERNANCE -->
-<section class="section" id="governance">
-  <h2>Governance & Advisory Structure</h2>
-  <p class="section-intro">
-    Structured governance ensuring strategic oversight, technical integrity, and responsible AI integration.
-  </p>
-  <div class="grid">
-    <div>
-      <h3>Strategic Oversight</h3>
-      <p>System-level infrastructure direction and resilience planning.</p>
-    </div>
-    <div>
-      <h3>Technical Advisory</h3>
-      <p>Alignment with structural science and AI-driven infrastructure analytics.</p>
-    </div>
-    <div>
-      <h3>Ethical & System Integrity</h3>
-      <p>Commitment to responsible AI deployment and structural safety.</p>
+      <div class="card">
+        <h3>Institutional Engagement</h3>
+        <p>
+          Structured collaboration frameworks with governmental and
+          strategic development entities.
+        </p>
+      </div>
+
     </div>
   </div>
-</section>
 
-<!-- CONTACT -->
-<section class="section" id="contact">
-  <h2>Institutional Engagement</h2>
-  <p class="section-intro">
-    Formal engagement with governmental institutions and strategic infrastructure initiatives.
-  </p>
-  <div class="contact-block">
-    For structured consultation and institutional correspondence:
-    <div class="contact-email">contact@salilabs.com</div>
-    All engagement inquiries are reviewed through internal evaluation to ensure long-term strategic alignment.
+  <div class="footer">
+    © 2026 Sali Labs. Strategic Engineering & Institutional Systems.
   </div>
-</section>
-
-<footer>
-  © 2026 Sali Labs — Strategic Global Infrastructure Intelligence Institution
-</footer>
 
 </body>
 </html>
