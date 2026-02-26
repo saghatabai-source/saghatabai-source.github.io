@@ -1,0 +1,146 @@
+/* Sali Labs – Tech Premium Design System */
+
+:root {
+  --bg-primary: #0f1117;
+  --bg-secondary: #161b22;
+  --text-primary: #e6edf3;
+  --text-secondary: #9da7b3;
+  --accent: #00d4ff;
+  --accent-glow: rgba(0,212,255,0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top right, rgba(0,212,255,0.08), transparent 40%),
+              var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 0;
+}
+
+/* NAV */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 8%;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(15,17,23,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 180px 0;
+}
+
+.hero h1 {
+  font-size: 58px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ffffff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero p {
+  max-width: 750px;
+  margin: 20px auto;
+  color: var(--text-secondary);
+  font-size: 20px;
+  animation: fadeInUp 1.6s ease forwards;
+}
+
+/* HEADINGS */
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* CARDS */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background: var(--bg-secondary);
+  padding: 40px;
+  border-radius: 14px;
+  transition: 0.4s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 0 25px rgba(0,212,255,0.15);
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  padding: 80px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ANIMATION */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
