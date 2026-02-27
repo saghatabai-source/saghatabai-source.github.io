@@ -262,3 +262,19 @@ p {
   }
 
 }
+/* ==============================
+   Institutional Adoption Block
+============================== */
+
+.adoption-block {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid #1f2937;
+}
+
+.signature-block {
+  margin-top: 30px;
+  padding: 20px;
+  background: #111827;
+  border-left: 4px solid #58a6ff;
+}
