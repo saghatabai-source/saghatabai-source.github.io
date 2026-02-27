@@ -6,20 +6,25 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-  background: #0b0f14;
+  background: #0a0f14;
   color: #e6edf3;
-  line-height: 1.7;
-  letter-spacing: 0.2px;
+  line-height: 1.75;
+  letter-spacing: 0.25px;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ================= CONTAINER ================= */
 
 .container {
-  max-width: 1120px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 80px 24px;
+  padding: 100px 28px;
 }
 
 /* ================= NAVIGATION ================= */
@@ -28,34 +33,35 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 48px;
-  background: rgba(15, 20, 28, 0.85);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 22px 60px;
+  background: rgba(12, 18, 26, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 .nav-brand {
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 24px;
 }
 
 .nav-links a {
   text-decoration: none;
   font-size: 14px;
   color: #9aa4b2;
-  transition: all 0.3s ease;
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .nav-links a::after {
@@ -65,8 +71,9 @@ html, body {
   left: 0;
   width: 0%;
   height: 1px;
-  background: #58a6ff;
+  background: linear-gradient(90deg,#58a6ff,#7dd3fc);
   transition: 0.3s ease;
+  opacity: 0.7;
 }
 
 .nav-links a:hover {
@@ -80,24 +87,31 @@ html, body {
 /* ================= HERO ================= */
 
 .hero {
-  padding: 140px 20px 120px 20px;
+  padding: 160px 20px 140px 20px;
   text-align: center;
   background:
-    radial-gradient(circle at 20% 30%, rgba(88,166,255,0.12), transparent 60%),
-    linear-gradient(180deg, #0b0f14 0%, #111827 100%);
+    radial-gradient(circle at 25% 25%, rgba(88,166,255,0.15), transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(125,211,252,0.08), transparent 60%),
+    linear-gradient(180deg, #0a0f14 0%, #111827 100%);
   border-bottom: 1px solid rgba(255,255,255,0.05);
+  animation: fadeInHero 1.2s ease forwards;
+}
+
+@keyframes fadeInHero {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero h1 {
-  font-size: 44px;
+  font-size: 46px;
   font-weight: 600;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   color: #ffffff;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 }
 
 .hero p {
-  max-width: 760px;
+  max-width: 780px;
   margin: 0 auto;
   font-size: 17px;
   color: #a5b1c2;
@@ -106,9 +120,9 @@ html, body {
 /* ================= HEADINGS ================= */
 
 h2 {
-  font-size: 26px;
-  margin-bottom: 22px;
-  margin-top: 60px;
+  font-size: 28px;
+  margin-bottom: 24px;
+  margin-top: 70px;
   color: #ffffff;
   position: relative;
 }
@@ -116,21 +130,21 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 70px;
   height: 2px;
-  background: #58a6ff;
-  margin-top: 12px;
+  background: linear-gradient(90deg,#58a6ff,#7dd3fc);
+  margin-top: 14px;
   opacity: 0.6;
 }
 
 h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
+  font-size: 19px;
+  margin-bottom: 14px;
   color: #ffffff;
 }
 
 p {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   color: #c9d1d9;
   font-size: 15px;
 }
@@ -140,40 +154,61 @@ p {
 a {
   color: #58a6ff;
   text-decoration: none;
+  transition: 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #7dd3fc;
 }
 
 /* ================= CARD GRID ================= */
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 36px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
 }
 
 .card {
-  background: linear-gradient(145deg, #111827, #0f172a);
-  padding: 30px;
-  border-radius: 10px;
+  background: linear-gradient(145deg, #0f172a, #0c1422);
+  padding: 34px;
+  border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.05);
-  transition: all 0.35s ease;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(88,166,255,0.06), transparent 60%);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: rgba(88,166,255,0.4);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
 }
 
 /* ================= FOOTER ================= */
 
 .footer {
-  background: #0b0f14;
-  padding: 80px 20px;
+  background: #0a0f14;
+  padding: 100px 20px;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
@@ -183,36 +218,37 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 50px;
+  gap: 60px;
 }
 
 .footer-section {
   flex: 1;
-  min-width: 240px;
+  min-width: 260px;
 }
 
 .footer h3,
 .footer h4 {
   color: #ffffff;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .footer p,
 .footer a {
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.8;
   color: #9aa4b2;
 }
 
 .footer a:hover {
-  color: #58a6ff;
+  color: #7dd3fc;
 }
 
 .footer-bottom {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 60px;
   font-size: 13px;
   color: #6b7280;
+  opacity: 0.8;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -222,23 +258,24 @@ a:hover {
   .nav {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 18px;
+    padding: 20px 30px;
   }
 
   .nav-links {
-    gap: 16px;
+    gap: 18px;
   }
 
   .hero {
-    padding: 100px 20px;
+    padding: 120px 20px;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 34px;
   }
 
   .container {
-    padding: 60px 20px;
+    padding: 70px 20px;
   }
 
   .footer-container {
