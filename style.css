@@ -288,5 +288,76 @@ a:hover {
 
   .footer-container {
     flex-direction: column;
-  }
+  /* ================= ACTIVE NAVIGATION SYSTEM ================= */
+
+.nav-links a {
+  position: relative;
 }
+
+/* Active link based on current page */
+
+body:has(a[href="index.html"]:focus),
+body:has(a[href="index.html"]:target) {}
+
+body:has(.nav-links a[href="index.html"]:hover) {}
+
+/* Modern Active Detection Using URL Matching */
+
+.nav-links a[href*="index.html"],
+.nav-links a[href*="vision.html"],
+.nav-links a[href*="founder.html"],
+.nav-links a[href*="infrastructure-intelligence.html"],
+.nav-links a[href*="analytical-framework.html"],
+.nav-links a[href*="research.html"],
+.nav-links a[href*="publications.html"],
+.nav-links a[href*="governance.html"],
+.nav-links a[href*="institutional-statement.html"],
+.nav-links a[href*="collaboration.html"],
+.nav-links a[href*="strategy.html"],
+.nav-links a[href*="about.html"] {
+  transition: 0.3s ease;
+}
+
+/* Auto Highlight Current Page */
+
+body:has(a[href="index.html"]) .nav-links a[href="index.html"],
+body:has(a[href="vision.html"]) .nav-links a[href="vision.html"],
+body:has(a[href="founder.html"]) .nav-links a[href="founder.html"],
+body:has(a[href="infrastructure-intelligence.html"]) .nav-links a[href="infrastructure-intelligence.html"],
+body:has(a[href="analytical-framework.html"]) .nav-links a[href="analytical-framework.html"],
+body:has(a[href="research.html"]) .nav-links a[href="research.html"],
+body:has(a[href="publications.html"]) .nav-links a[href="publications.html"],
+body:has(a[href="governance.html"]) .nav-links a[href="governance.html"],
+body:has(a[href="institutional-statement.html"]) .nav-links a[href="institutional-statement.html"],
+body:has(a[href="collaboration.html"]) .nav-links a[href="collaboration.html"],
+body:has(a[href="strategy.html"]) .nav-links a[href="strategy.html"],
+body:has(a[href="about.html"]) .nav-links a[href="about.html"] {
+  color: #ffffff;
+}
+
+.nav-links a[href="index.html"]:focus,
+.nav-links a[href="vision.html"]:focus,
+.nav-links a[href="founder.html"]:focus,
+.nav-links a[href="infrastructure-intelligence.html"]:focus,
+.nav-links a[href="analytical-framework.html"]:focus,
+.nav-links a[href="research.html"]:focus,
+.nav-links a[href="publications.html"]:focus,
+.nav-links a[href="governance.html"]:focus,
+.nav-links a[href="institutional-statement.html"]:focus,
+.nav-links a[href="collaboration.html"]:focus,
+.nav-links a[href="strategy.html"]:focus,
+.nav-links a[href="about.html"]:focus {
+  color: #ffffff;
+}
+
+/* Elegant Active Underline */
+
+.nav-links a.current-active {
+  color: #ffffff;
+}
+
+.nav-links a.current-active::after {
+  width: 100%;
+}
+  }
+  
