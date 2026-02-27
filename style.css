@@ -206,7 +206,25 @@ p {
   font-size: 13px;
   color: #6b7280;
 }
+/* ==============================
+   Button (Primary)
+============================== */
 
+.btn-primary {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #58a6ff;
+  color: #0d1117;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #79c0ff;
+   }
 /* =========================================
    Responsive
 ========================================= */
