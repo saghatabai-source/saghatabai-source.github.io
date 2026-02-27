@@ -1,9 +1,6 @@
-/* =====================================================
-   Sali Labs – Institutional Design System
-   Version 1.0
-===================================================== */
-
-/* ===== Base Reset ===== */
+/* =========================================
+   Global Reset
+========================================= */
 
 * {
   margin: 0;
@@ -12,9 +9,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: #0d1117;
-  color: #c9d1d9;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0f16;
+  color: #e6edf3;
   line-height: 1.7;
 }
 
@@ -23,135 +20,157 @@ a {
   color: inherit;
 }
 
-h1, h2, h3, h4 {
-  color: #ffffff;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-p {
-  margin-bottom: 20px;
-  font-size: 15px;
-  color: #c9d1d9;
-}
-
-/* =====================================================
+/* =========================================
    Navigation
-===================================================== */
+========================================= */
 
 .nav {
+  background: #0d1117;
+  border-bottom: 1px solid #1f2937;
+  padding: 18px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: #0d1117;
-  border-bottom: 1px solid #1f2937;
 }
 
-.nav-brand {
+.nav-brand strong {
   font-size: 18px;
-  font-weight: 600;
   color: #ffffff;
 }
 
-.nav-links {
-  display: flex;
-  gap: 30px;
-}
-
 .nav-links a {
+  margin-left: 22px;
   font-size: 14px;
-  color: #c9d1d9;
+  color: #9ca3af;
   transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #00d4ff;
+  color: #58a6ff;
 }
 
-/* =====================================================
+/* =========================================
    Hero Section
-===================================================== */
+========================================= */
 
 .hero {
-  padding: 100px 20px;
+  padding: 120px 20px 100px 20px;
   text-align: center;
-  background: linear-gradient(180deg, #0d1117 0%, #111827 100%);
+  background: linear-gradient(
+    135deg,
+    #0b0f16 0%,
+    #0d1b2a 40%,
+    #003049 100%
+  );
 }
 
 .hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #bde0fe, #4cc9f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
-  font-size: 16px;
+  font-size: 18px;
   color: #c9d1d9;
 }
 
-/* =====================================================
-   Container
-===================================================== */
+/* =========================================
+   Main Container
+========================================= */
 
 .container {
   max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 80px 20px;
 }
 
-section {
-  margin-bottom: 70px;
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-/* =====================================================
+h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #4cc9f0;
+  margin-top: 8px;
+}
+
+p {
+  margin-bottom: 30px;
+  color: #c9d1d9;
+}
+
+/* =========================================
    Card Grid
-===================================================== */
+========================================= */
 
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 30px;
 }
 
 .card {
+  flex: 1;
+  min-width: 280px;
   background: #111827;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid #1f2937;
   transition: 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: #00d4ff;
+  border-color: #4cc9f0;
+  transform: translateY(-4px);
 }
 
 .card h3 {
   margin-bottom: 15px;
   font-size: 18px;
+  color: #ffffff;
 }
 
 .card p {
   font-size: 14px;
-  color: #c9d1d9;
+  color: #9ca3af;
 }
 
-/* =====================================================
-   Footer
-===================================================== */
+.card a {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #58a6ff;
+}
 
-.site-footer {
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   Footer (New Unified Version)
+========================================= */
+
+.footer {
   background: #0d1117;
+  padding: 60px 20px;
   border-top: 1px solid #1f2937;
-  padding: 60px 20px 40px;
   margin-top: 80px;
 }
 
-.footer-content {
-  max-width: 1100px;
+.footer-container {
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -164,74 +183,63 @@ section {
   min-width: 220px;
 }
 
-.footer-section h3,
-.footer-section h4 {
-  margin-bottom: 15px;
+.footer h3,
+.footer h4 {
+  color: #ffffff;
+  margin-bottom: 12px;
 }
 
-.footer-section a {
-  color: #c9d1d9;
+.footer p,
+.footer a {
   font-size: 14px;
-  transition: 0.3s ease;
+  line-height: 1.6;
+  color: #9ca3af;
 }
 
-.footer-section a:hover {
-  color: #00d4ff;
+.footer a:hover {
+  color: #58a6ff;
 }
 
 .footer-bottom {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 40px;
   font-size: 13px;
-  color: #8b949e;
-  line-height: 1.6;
+  color: #6b7280;
 }
 
-/* =====================================================
-   Buttons (Future Use)
-===================================================== */
-
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #00d4ff;
-  color: #0d1117;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background: #00b8e6;
-}
-
-/* =====================================================
+/* =========================================
    Responsive
-===================================================== */
+========================================= */
 
 @media (max-width: 768px) {
 
   .nav {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
   }
 
   .nav-links {
-    flex-direction: column;
-    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 8px 12px 0 0;
+    display: inline-block;
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 34px;
   }
 
-  .container {
-    margin: 60px auto;
+  .hero p {
+    font-size: 16px;
   }
 
-  .footer-content {
+  .card-grid {
+    flex-direction: column;
+  }
+
+  .footer-container {
     flex-direction: column;
   }
 
