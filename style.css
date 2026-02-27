@@ -1,4 +1,4 @@
-/* ================= GLOBAL ================= */
+/* ================= SIGNATURE GLOBAL ================= */
 
 * {
   margin: 0;
@@ -12,56 +12,68 @@ html {
 
 body {
   font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-  background: #0a0f14;
+  background: #070b11;
   color: #e6edf3;
-  line-height: 1.75;
-  letter-spacing: 0.25px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
   -webkit-font-smoothing: antialiased;
 }
 
-/* ================= CONTAINER ================= */
+/* ================= SIGNATURE CONTAINER ================= */
 
 .container {
-  max-width: 1140px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding: 100px 28px;
+  padding: 120px 32px;
 }
 
-/* ================= NAVIGATION ================= */
+/* ================= SIGNATURE NAVIGATION ================= */
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 60px;
-  background: rgba(12, 18, 26, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding: 24px 70px;
+  background: rgba(10, 16, 24, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(88,166,255,0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
 }
 
 .nav-brand {
   font-size: 18px;
   font-weight: 600;
+  letter-spacing: 2px;
   color: #ffffff;
-  letter-spacing: 1.5px;
+  position: relative;
+}
+
+/* subtle brand glow */
+.nav-brand::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40%;
+  height: 1px;
+  background: linear-gradient(90deg,#58a6ff,transparent);
+  opacity: 0.6;
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 28px;
 }
 
 .nav-links a {
-  text-decoration: none;
   font-size: 14px;
   color: #9aa4b2;
+  text-decoration: none;
   position: relative;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .nav-links a::after {
@@ -84,45 +96,45 @@ body {
   width: 100%;
 }
 
-/* ================= HERO ================= */
+/* ================= SIGNATURE HERO ================= */
 
 .hero {
-  padding: 160px 20px 140px 20px;
+  padding: 180px 20px 160px 20px;
   text-align: center;
   background:
-    radial-gradient(circle at 25% 25%, rgba(88,166,255,0.15), transparent 60%),
-    radial-gradient(circle at 80% 20%, rgba(125,211,252,0.08), transparent 60%),
-    linear-gradient(180deg, #0a0f14 0%, #111827 100%);
+    radial-gradient(circle at 20% 30%, rgba(88,166,255,0.18), transparent 60%),
+    radial-gradient(circle at 85% 15%, rgba(125,211,252,0.08), transparent 60%),
+    linear-gradient(180deg, #070b11 0%, #0f172a 100%);
   border-bottom: 1px solid rgba(255,255,255,0.05);
-  animation: fadeInHero 1.2s ease forwards;
+  animation: heroFade 1.4s ease forwards;
 }
 
-@keyframes fadeInHero {
-  from { opacity: 0; transform: translateY(15px); }
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .hero h1 {
-  font-size: 46px;
+  font-size: 50px;
   font-weight: 600;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
   color: #ffffff;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.5px;
 }
 
 .hero p {
-  max-width: 780px;
+  max-width: 800px;
   margin: 0 auto;
-  font-size: 17px;
+  font-size: 18px;
   color: #a5b1c2;
 }
 
-/* ================= HEADINGS ================= */
+/* ================= SIGNATURE HEADINGS ================= */
 
 h2 {
-  font-size: 28px;
-  margin-bottom: 24px;
-  margin-top: 70px;
+  font-size: 30px;
+  margin-top: 80px;
+  margin-bottom: 28px;
   color: #ffffff;
   position: relative;
 }
@@ -130,26 +142,26 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  width: 70px;
+  width: 80px;
   height: 2px;
+  margin-top: 16px;
   background: linear-gradient(90deg,#58a6ff,#7dd3fc);
-  margin-top: 14px;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 h3 {
-  font-size: 19px;
+  font-size: 20px;
   margin-bottom: 14px;
   color: #ffffff;
 }
 
 p {
-  margin-bottom: 22px;
+  font-size: 16px;
+  margin-bottom: 26px;
   color: #c9d1d9;
-  font-size: 15px;
 }
 
-/* ================= LINKS ================= */
+/* ================= SIGNATURE LINKS ================= */
 
 a {
   color: #58a6ff;
@@ -158,24 +170,24 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
   color: #7dd3fc;
+  text-decoration: underline;
 }
 
-/* ================= CARD GRID ================= */
+/* ================= SIGNATURE CARD SYSTEM ================= */
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-  margin-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+  margin-top: 60px;
 }
 
 .card {
-  background: linear-gradient(145deg, #0f172a, #0c1422);
-  padding: 34px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.05);
+  background: linear-gradient(150deg,#0f172a,#0b1220);
+  padding: 40px;
+  border-radius: 14px;
+  border: 1px solid rgba(88,166,255,0.08);
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
@@ -184,14 +196,14 @@ a:hover {
 .card::before {
   content: "";
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(88,166,255,0.06), transparent 60%);
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: radial-gradient(circle, rgba(88,166,255,0.06), transparent 65%);
   transform: rotate(25deg);
   opacity: 0;
-  transition: 0.5s ease;
+  transition: 0.6s ease;
 }
 
 .card:hover::before {
@@ -199,17 +211,17 @@ a:hover {
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
   border-color: rgba(88,166,255,0.4);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.5);
 }
 
-/* ================= FOOTER ================= */
+/* ================= SIGNATURE FOOTER ================= */
 
 .footer {
-  background: #0a0f14;
-  padding: 100px 20px;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  background: #070b11;
+  padding: 120px 20px;
+  border-top: 1px solid rgba(88,166,255,0.05);
 }
 
 .footer-container {
@@ -218,24 +230,24 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 60px;
+  gap: 70px;
 }
 
 .footer-section {
   flex: 1;
-  min-width: 260px;
+  min-width: 280px;
 }
 
 .footer h3,
 .footer h4 {
   color: #ffffff;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .footer p,
 .footer a {
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.9;
   color: #9aa4b2;
 }
 
@@ -245,7 +257,7 @@ a:hover {
 
 .footer-bottom {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 70px;
   font-size: 13px;
   color: #6b7280;
   opacity: 0.8;
@@ -258,24 +270,20 @@ a:hover {
   .nav {
     flex-direction: column;
     align-items: flex-start;
-    gap: 18px;
+    gap: 20px;
     padding: 20px 30px;
   }
 
-  .nav-links {
-    gap: 18px;
-  }
-
   .hero {
-    padding: 120px 20px;
+    padding: 130px 20px;
   }
 
   .hero h1 {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   .container {
-    padding: 70px 20px;
+    padding: 80px 20px;
   }
 
   .footer-container {
