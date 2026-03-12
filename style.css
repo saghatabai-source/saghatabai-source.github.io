@@ -7,29 +7,17 @@ box-sizing:border-box;
 }
 
 body{
-
 font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-
-background:#0a0f16;
-
+background:#0b1118;
 color:#e6edf3;
-
 line-height:1.75;
-
 overflow-x:hidden;
-
 }
 
-/* ================= REMOVE TOP ICON / NAV ================= */
+/* ================= REMOVE TOP NAV ================= */
 
-.nav{
-display:none;
-}
-
-.nav-inner{
-display:none;
-}
-
+.nav,
+.nav-inner,
 .nav-links{
 display:none;
 }
@@ -40,57 +28,51 @@ display:none;
 
 position:relative;
 
-padding:170px 20px 140px;
+padding:160px 20px 140px;
 
 text-align:center;
 
 background:
-radial-gradient(circle at 20% 20%,rgba(88,166,255,0.35),transparent 60%),
-radial-gradient(circle at 80% 10%,rgba(125,211,252,0.20),transparent 60%),
-linear-gradient(180deg,#0a0f16 0%,#111827 100%);
+radial-gradient(circle at 50% 20%,rgba(88,166,255,0.25),transparent 60%),
+linear-gradient(180deg,#0b1118 0%,#111a24 100%);
 
 border-bottom:1px solid rgba(255,255,255,0.05);
 
 }
 
-/* moving light */
+/* subtle glow */
 
-.hero::before{
+.hero::after{
 
 content:"";
 
 position:absolute;
 
-top:-40%;
-left:-40%;
+bottom:0;
 
-width:180%;
-height:180%;
+left:50%;
 
-background:radial-gradient(circle,rgba(88,166,255,0.12),transparent 70%);
+transform:translateX(-50%);
 
-animation:heroLight 14s linear infinite;
+width:90px;
 
-}
+height:2px;
 
-@keyframes heroLight{
+background:linear-gradient(90deg,#58a6ff,#7dd3fc);
 
-0%{transform:rotate(0deg)}
-100%{transform:rotate(360deg)}
+opacity:.5;
 
 }
 
 .hero-inner{
 
-max-width:920px;
+max-width:900px;
 
 margin:auto;
 
-position:relative;
-
-z-index:2;
-
 }
+
+/* ================= HERO TEXT ================= */
 
 .brand-line{
 
@@ -102,19 +84,19 @@ text-transform:uppercase;
 
 color:#9fb3c8;
 
-margin-bottom:20px;
+margin-bottom:18px;
 
 }
 
 .hero h1{
 
-font-size:60px;
+font-size:52px;
 
 font-weight:600;
 
 margin-bottom:22px;
 
-letter-spacing:1px;
+letter-spacing:.5px;
 
 }
 
@@ -138,13 +120,13 @@ max-width:1100px;
 
 margin:auto;
 
-padding:100px 24px;
+padding:110px 24px;
 
 }
 
 .section{
 
-margin-bottom:90px;
+margin-bottom:80px;
 
 }
 
@@ -152,9 +134,9 @@ margin-bottom:90px;
 
 h2{
 
-font-size:32px;
+font-size:30px;
 
-margin-bottom:22px;
+margin-bottom:20px;
 
 font-weight:600;
 
@@ -168,15 +150,15 @@ content:"";
 
 display:block;
 
-width:70px;
+width:60px;
 
 height:2px;
 
-background:linear-gradient(90deg,#58a6ff,#7dd3fc);
+background:#58a6ff;
 
-margin-top:12px;
+margin-top:10px;
 
-opacity:0.6;
+opacity:.6;
 
 }
 
@@ -206,7 +188,7 @@ display:grid;
 
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
-gap:32px;
+gap:28px;
 
 margin-top:40px;
 
@@ -214,57 +196,25 @@ margin-top:40px;
 
 .card{
 
-background:linear-gradient(150deg,#0f1620,#121b27);
+background:#0f1620;
 
-padding:36px;
+padding:34px;
 
-border-radius:16px;
+border-radius:14px;
 
 border:1px solid rgba(255,255,255,0.05);
 
-transition:0.35s;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-/* glow */
-
-.card::before{
-
-content:"";
-
-position:absolute;
-
-top:-60%;
-left:-60%;
-
-width:220%;
-height:220%;
-
-background:radial-gradient(circle,rgba(88,166,255,0.14),transparent 70%);
-
-opacity:0;
-
-transition:0.6s;
-
-}
-
-.card:hover::before{
-
-opacity:1;
+transition:0.3s ease;
 
 }
 
 .card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-6px);
 
 border-color:#58a6ff;
 
-box-shadow:0 28px 70px rgba(0,0,0,0.65);
+box-shadow:0 16px 40px rgba(0,0,0,0.5);
 
 }
 
@@ -272,13 +222,13 @@ box-shadow:0 28px 70px rgba(0,0,0,0.65);
 
 .contact-email{
 
-margin-top:16px;
+margin-top:14px;
 
 }
 
 .contact-email a{
 
-font-size:18px;
+font-size:17px;
 
 color:#58a6ff;
 
@@ -296,11 +246,11 @@ text-decoration:underline;
 
 .footer{
 
-background:#0a0f16;
+background:#0b1118;
 
 border-top:1px solid rgba(255,255,255,0.05);
 
-padding:100px 20px;
+padding:90px 20px;
 
 }
 
@@ -355,7 +305,7 @@ color:#ffffff;
 
 .footer-bottom{
 
-margin-top:70px;
+margin-top:60px;
 
 text-align:center;
 
@@ -372,27 +322,143 @@ line-height:1.7;
 @media(max-width:900px){
 
 .hero{
-
 padding:130px 20px;
-
 }
 
 .hero h1{
-
 font-size:40px;
-
 }
 
 .container{
-
 padding:70px 20px;
-
 }
 
 .footer-container{
-
 flex-direction:column;
+}
+
+/* ================= LUXURY RESEARCH LAYER ================= */
+
+/* subtle background grid */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+
+background-size:60px 60px;
+
+pointer-events:none;
+
+z-index:-1;
 
 }
+
+/* hero premium glow */
+
+.hero{
+
+overflow:hidden;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:-50%;
+left:-50%;
+
+width:200%;
+height:200%;
+
+background:radial-gradient(circle, rgba(88,166,255,0.15), transparent 65%);
+
+animation:heroGlow 20s linear infinite;
+
+opacity:.5;
+
+}
+
+@keyframes heroGlow{
+
+0%{transform:rotate(0deg)}
+100%{transform:rotate(360deg)}
+
+}
+
+/* refined typography */
+
+.hero h1{
+
+font-weight:600;
+
+letter-spacing:1px;
+
+text-shadow:0 0 30px rgba(88,166,255,0.15);
+
+}
+
+/* section breathing space */
+
+.section{
+
+padding-top:10px;
+
+}
+
+/* elegant card refinement */
+
+.card{
+
+backdrop-filter:blur(4px);
+
+border:1px solid rgba(88,166,255,0.08);
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+
+border-color:#58a6ff;
+
+}
+
+/* footer luxury tone */
+
+.footer{
+
+background:
+linear-gradient(180deg,#0b1118 0%,#0f1620 100%);
+
+}
+
+/* smooth link hover */
+
+a{
+
+transition:all .25s ease;
+
+}
+
+a:hover{
+
+color:#7dd3fc;
 
 }
