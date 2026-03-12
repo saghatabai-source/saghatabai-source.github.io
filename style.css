@@ -137,17 +137,6 @@ h2 {
   margin-bottom: 28px;
   color: #ffffff;
   position: relative;
-}
-
-h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 2px;
-  margin-top: 16px;
-  background: linear-gradient(90deg,#58a6ff,#7dd3fc);
-  opacity: 0.7;
-}
 
 h3 {
   font-size: 20px;
