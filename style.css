@@ -1038,4 +1038,65 @@ transform:translateY(0);
 
 }
 
+/* ===== ANIMATED RESEARCH GRID ===== */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+
+background-size:80px 80px;
+
+animation:gridMove 40s linear infinite;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+@keyframes gridMove{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(80px);
+}
+
+/* ===== INTERACTIVE CARDS ===== */
+
+.card{
+
+cursor:default;
+
+transition:
+
+transform .4s ease,
+box-shadow .4s ease,
+border-color .4s ease,
+background .4s ease;
+
+}
+
+.card:hover{
+
+transform:translateY(-14px) scale(1.02);
+
+box-shadow:0 35px 90px rgba(0,0,0,0.65);
+
+border-color:rgba(88,166,255,0.45);
+
 }
