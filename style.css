@@ -24,9 +24,9 @@ display:none;
 
 /* ================= HERO ================= */
 
-.hero{
-
-width:100%;
+.hero
+width:100vw;
+margin-left:calc(-50vw + 50%);
 
 max-width:none;
 
