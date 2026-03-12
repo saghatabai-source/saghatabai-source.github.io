@@ -524,3 +524,51 @@ letter-spacing:.5px;
 background:linear-gradient(180deg,#0a0f16 0%,#0f1620 100%);
 
   }
+/* ===== HERO FULL WIDTH FIX ===== */
+
+.hero{
+
+position:relative;
+width:100vw;
+margin-left:calc(-50vw + 50%);
+
+padding:180px 20px 160px;
+
+text-align:center;
+
+background:
+radial-gradient(circle at 30% 20%, rgba(88,166,255,0.35), transparent 60%),
+radial-gradient(circle at 80% 0%, rgba(125,211,252,0.20), transparent 60%),
+linear-gradient(180deg,#0a0f16 0%,#111827 100%);
+
+overflow:hidden;
+
+}
+
+
+/* ===== AI LIGHT EFFECT ===== */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:-60%;
+left:-60%;
+
+width:220%;
+height:220%;
+
+background:radial-gradient(circle, rgba(88,166,255,0.15), transparent 70%);
+
+animation:heroRotate 25s linear infinite;
+
+opacity:.5;
+
+}
+
+@keyframes heroRotate{
+0%{transform:rotate(0deg)}
+100%{transform:rotate(360deg)}
+  }
