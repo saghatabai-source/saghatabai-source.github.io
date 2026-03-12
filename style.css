@@ -893,4 +893,149 @@ transform:translateY(-40px) translateX(30px);
 transform:translateY(0) translateX(0);
 }
 
+/* ===== HERO PREMIUM TITLE ===== */
+
+.hero h1{
+
+font-size:60px;
+
+font-weight:600;
+
+background:linear-gradient(90deg,#ffffff,#7dd3fc,#58a6ff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+letter-spacing:1px;
+
+margin-bottom:24px;
+
+}
+
+/* ===== THINK TANK TYPOGRAPHY ===== */
+
+h2{
+
+font-size:30px;
+
+font-weight:500;
+
+letter-spacing:.5px;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+font-size:16px;
+
+line-height:1.9;
+
+color:#c9d1d9;
+
+max-width:780px;
+
   }
+
+/* ===== RESEARCH TITLE LINE ===== */
+
+h2::after{
+
+content:"";
+
+display:block;
+
+width:60px;
+
+height:2px;
+
+background:linear-gradient(90deg,#58a6ff,#7dd3fc);
+
+margin-top:10px;
+
+opacity:.6;
+
+}
+
+/* ===== SECTION DIVIDER ===== */
+
+section{
+
+position:relative;
+
+padding-bottom:60px;
+
+}
+
+section::after{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+left:50%;
+
+transform:translateX(-50%);
+
+width:120px;
+height:1px;
+
+background:linear-gradient(90deg,transparent,#58a6ff,transparent);
+
+opacity:.25;
+
+}
+
+/* ===== CARD INTERACTION ===== */
+
+.card{
+
+cursor:default;
+
+transition:
+
+transform .35s ease,
+box-shadow .35s ease,
+border-color .35s ease,
+background .35s ease;
+
+}
+
+.card:hover{
+
+background:linear-gradient(150deg,#0f1620,#1a2433);
+
+transform:translateY(-12px);
+
+box-shadow:0 32px 80px rgba(0,0,0,0.65);
+
+}
+
+/* ===== HERO MOTION ===== */
+
+.hero{
+
+animation:heroFade 1.5s ease;
+
+}
+
+@keyframes heroFade{
+
+from{
+
+opacity:0;
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
